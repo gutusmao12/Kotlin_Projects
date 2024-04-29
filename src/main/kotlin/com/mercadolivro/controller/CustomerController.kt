@@ -1,15 +1,22 @@
 package com.mercadolivro.controller
 
+<<<<<<< HEAD
 import com.mercadolivro.controller.request.PostCustomerRequest
 import com.mercadolivro.controller.request.PutCustomerRequest
 import com.mercadolivro.model.CustomerModel
 import org.springframework.http.HttpStatus
 import org.springframework.web.bind.annotation.*
+=======
+import org.springframework.web.bind.annotation.GetMapping
+import org.springframework.web.bind.annotation.RequestMapping
+import org.springframework.web.bind.annotation.RestController
+>>>>>>> 16aea9b27dc02e8097d38d6cf00237018afb5596
 
 @RestController
 @RequestMapping("customers")
 class CustomerController {
 
+<<<<<<< HEAD
     val customers = mutableListOf<CustomerModel>()
 
     @GetMapping
@@ -52,4 +59,11 @@ class CustomerController {
     fun delete(@PathVariable id: String) {
         customers.removeIf { it.id == id }
     }
+=======
+    @GetMapping
+    fun getCustomer(): String {
+        return "Customer 1"
+    }
+
+>>>>>>> 16aea9b27dc02e8097d38d6cf00237018afb5596
 }
